@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="/src/assets/devchallenges.png"
+      type="image/x-icon"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              sm: '480px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1440px',
+            },
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+            },
+            colors: {
+              // GRAY
+              gray: '#4E5150',
+              gray1: '#333333',
+              gray2: '#4F4F4F',
+              gray3: '#828282',
+              gray4: '#BDBDBD',
+              gray5: '#E0E0E0',
+              gray6: '#F2F2F2',
+
+              // ORANGE
+              orange: '#F2994A',
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Checkout Page</title>
+  </head>
+  <body class="font-montserrat font-semibold">
+    <!-- CONTAINER -->
+    <div class="mx-auto w-[90%] lg:w-[70%]">
+      <!-- HEADER -->
+      <header class="mt-8 lg:mt-12">
+        <h1
+          class="text-[24px] leading-[29.26px] text-gray lg:text-[36px] lg:leading-[43.88px]"
+        >
+          Checkout
+        </h1>
+      </header>
+
+      <!-- MAIN -->
+      <main
+        class="mt-5 lg:mt-10 lg:flex lg:flex-row-reverse lg:justify-between"
+      >
+        <!-- CART -->
+        <div class="max-h-[500px] rounded-xl bg-gray6 py-8 px-6 shadow-sm">
+          <!-- cart items -->
+          <div class="">
+            <!-- item 1 -->
+            <div class="flex">
+              <!-- image -->
+              <div class="w-[40%] max-w-[120px] lg:max-w-[170px]">
+                <img
+                  class="rounded-xl"
+                  src="/src/assets/photo1.png"
+                  alt="Vintage Backbag"
+                />
+              </div>
+
+              <!-- item 1 details -->
+              <div class="ml-6">
+                <h3
+                  class="text-[12px] leading-[15px] text-gray lg:text-[16px] lg:leading-5"
+                >
+                  Vintage Backbag
+                </h3>
+                <p
+                  class="mt-1.5 text-[14px] leading-[17px] text-orange lg:text-[16px] lg:leading-5"
+                >
+                  $54.99
+                  <span
+                    class="ml-3 text-[10px] leading-3 text-gray line-through lg:text-[12px] lg:leading-[15px]"
+                    >$94.99</span
+                  >
+                </p>
+
+                <!-- qty -->
+                <div
+                  class="mt-8 flex w-[122px] justify-evenly rounded-xl border border-gray3 py-3 lg:mt-10 lg:w-[134px]"
+                >
+                  <button class="rounded-md bg-gray5 px-2 text-gray3">-</button>
+                  <span class="text-[16px] leading-5 text-gray">1</span>
+                  <button class="rounded-md bg-gray5 px-2 text-gray3">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="mt-8 flex">
+              <!-- image -->
+              <div class="w-[40%] max-w-[120px] lg:max-w-[170px]">
+                <img
+                  class="rounded-xl"
+                  src="/src/assets/photo2.png"
+                  alt="Levi Shoes"
+                />
+              </div>
+
+              <!-- item 2 details -->
+              <div class="ml-6">
+                <h3
+                  class="text-[12px] leading-[15px] text-gray lg:text-[16px] lg:leading-5"
+                >
+                  Levi Shoes
+                </h3>
+                <p
+                  class="mt-1.5 text-[14px] leading-[17px] text-orange lg:text-[16px] lg:leading-5"
+                >
+                  $74.99
+                  <span
+                    class="ml-3 text-[10px] leading-3 text-gray line-through lg:text-[12px] lg:leading-[15px]"
+                    >$124.99</span
+                  >
+                </p>
+
+                <!-- qty -->
+                <div
+                  class="mt-8 flex w-[122px] justify-evenly rounded-xl border border-gray3 py-3 lg:mt-10 lg:w-[134px]"
+                >
+                  <button class="rounded-md bg-gray5 px-2 text-gray3">-</button>
+                  <span class="text-[16px] leading-5 text-gray">1</span>
+                  <button class="rounded-md bg-gray5 px-2 text-gray3">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- billing details -->
+          <div class="mt-10">
+            <!-- shipping -->
+            <div
+              class="flex justify-between border-t border-gray4 py-2.5 text-[14px] leading-[17px] text-gray1"
+            >
+              <h4 class="lg:text-[18px] lg:leading-[21px]">Shipping</h4>
+              <p class="">$19</p>
+            </div>
+
+            <!-- total -->
+            <div
+              class="mt-3 flex justify-between border-t border-gray4 py-2.5 text-[14px] leading-[17px] text-gray1"
+            >
+              <h4 class="lg:text-[18px] lg:leading-[21px]">Total</h4>
+              <p>$148.98</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="mt-8 lg:mt-0 lg:w-[50%]">
+          <form action="">
+            <!-- Contact Information -->
+            <div>
+              <h2
+                class="text-[14px] leading-[17.07px] text-gray1 lg:text-[18px] lg:leading-[22px]"
+              >
+                Contact infomation
+              </h2>
+
+              <!-- email -->
+              <div class="mt-2.5 lg:mt-4">
+                <label
+                  class="text-[10px] leading-3 text-gray2 lg:text-[12px] lg:leading-[15px]"
+                  for="email"
+                  >E-mail</label
+                >
+                <div class="relative mt-1 text-gray3 lg:mt-2">
+                  <img
+                    class="absolute top-[50%] left-3.5 w-[15px] -translate-y-[50%] lg:w-5"
+                    src="/src/assets/email.svg"
+                    alt="email"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email..."
+                    class="w-full rounded-xl border border-gray3 py-[12.77px] pl-10 text-[12px] leading-[14.63px] lg:py-[18px] lg:pl-12 lg:text-[16px] lg:leading-5"
+                  />
+                </div>
+              </div>
+
+              <!-- phone -->
+              <div class="mt-2.5 lg:mt-4">
+                <label
+                  class="text-[10px] leading-3 text-gray2 lg:text-[12px] lg:leading-[15px]"
+                  for="phone"
+                  >Phone</label
+                >
+                <div class="relative mt-1 text-gray3 lg:mt-2">
+                  <img
+                    class="absolute top-[50%] left-3.5 w-[15px] -translate-y-[50%] lg:w-5"
+                    src="/src/assets/call.svg"
+                    alt="phone"
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter your phone..."
+                    class="w-full rounded-xl border border-gray3 py-[12.77px] pl-10 text-[12px] leading-[14.63px] lg:py-[18px] lg:pl-12 lg:text-[16px] lg:leading-5"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="mt-8 lg:mt-14">
+              <h2
+                class="text-[14px] leading-[17.07px] text-gray1 lg:text-[18px] lg:leading-[22px]"
+              >
+                Shipping Address
+              </h2>
+
+              <!-- full name -->
+              <div class="mt-2.5 lg:mt-4">
+                <label
+                  class="text-[10px] leading-3 text-gray2 lg:text-[12px] lg:leading-[15px]"
+                  for="full_name"
+                  >Full name</label
+                >
+                <div class="relative mt-1 text-gray3 lg:mt-2">
+                  <img
+                    class="absolute top-[50%] left-3.5 w-[15px] -translate-y-[50%] lg:w-5"
+                    src="/src/assets/account_circle.svg"
+                    alt="profile"
+                  />
+                  <input
+                    type="full_name"
+                    name="full_name"
+                    id="full_name"
+                    value="Rodney Cotton"
+                    placeholder="Enter your Full name..."
+                    class="w-full rounded-xl border border-gray3 py-[12.77px] pl-10 text-[12px] leading-[14.63px] lg:py-[18px] lg:pl-12 lg:text-[16px] lg:leading-5"
+                  />
+                </div>
+              </div>
+
+              <!-- address -->
+              <div class="mt-2.5 lg:mt-4">
+                <label
+                  class="text-[10px] leading-3 text-gray2 lg:text-[12px] lg:leading-[15px]"
+                  for="address"
+                  >Address</label
+                >
+                <div class="relative mt-1 text-gray3 lg:mt-2">
+                  <img
+                    class="absolute top-[50%] left-3.5 w-[15px] -translate-y-[50%] lg:w-5"
+                    src="/src/assets/home.svg"
+                    alt="address"
+                  />
+                  <input
+                    type="address"
+                    name="address"
+                    id="address"
+                    placeholder="Your address..."
+                    class="w-full rounded-xl border border-gray3 py-[12.77px] pl-10 text-[12px] leading-[14.63px] lg:py-[18px] lg:pl-12 lg:text-[16px] lg:leading-5"
+                  />
+                </div>
+              </div>
+
+              <!-- city -->
+              <div class="mt-2.5 lg:mt-4">
+                <label
+                  class="text-[10px] leading-3 text-gray2 lg:text-[12px] lg:leading-[15px]"
+                  for="city"
+                  >City</label
+                >
+                <div class="relative mt-1 text-gray3 lg:mt-2">
+                  <img
+                    class="absolute top-[50%] left-3.5 w-[15px] -translate-y-[50%] lg:w-5"
+                    src="/src/assets/location_city.svg"
+                    alt="city"
+                  />
+                  <input
+                    type="city"
+                    name="city"
+                    id="city"
+                    placeholder="Your city..."
+                    class="w-full rounded-xl border border-gray3 py-[12.77px] pl-10 text-[12px] leading-[14.63px] lg:py-[18px] lg:pl-12 lg:text-[16px] lg:leading-5"
+                  />
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <!-- country -->
+                <div class="mt-2.5 w-[40%] lg:mt-4">
+                  <label
+                    class="text-[10px] leading-3 text-gray2 lg:text-[12px] lg:leading-[15px]"
+                    for="country"
+                    >Country</label
+                  >
+                  <div class="relative mt-1 text-gray3 lg:mt-2">
+                    <img
+                      class="absolute top-[50%] left-3.5 w-[15px] -translate-y-[50%] lg:w-5"
+                      src="/src/assets/location_city.svg"
+                      alt="country"
+                    />
+                    <input
+                      type="country"
+                      name="country"
+                      id="country"
+                      placeholder="Your country..."
+                      class="w-full rounded-xl border border-gray3 py-[12.77px] pl-10 text-[12px] leading-[14.63px] lg:py-[18px] lg:pl-12 lg:text-[16px] lg:leading-5"
+                    />
+                  </div>
+                </div>
+
+                <!-- postal code -->
+                <div class="mt-2.5 w-[40%] lg:mt-4">
+                  <label
+                    class="text-[10px] leading-3 text-gray2 lg:text-[12px] lg:leading-[15px]"
+                    for="postalCode"
+                    >Postal code</label
+                  >
+                  <div class="relative mt-1 text-gray3 lg:mt-2">
+                    <img
+                      class="absolute top-[50%] left-3.5 w-[15px] -translate-y-[50%] lg:w-5"
+                      src="/src/assets/markunread_mailbox.svg"
+                      alt="postal code"
+                    />
+                    <input
+                      type="postalCode"
+                      name="postalCode"
+                      id="postalCode"
+                      placeholder="Your postal code..."
+                      class="w-full rounded-xl border border-gray3 py-[12.77px] pl-10 text-[12px] leading-[14.63px] lg:py-[18px] lg:pl-12 lg:text-[16px] lg:leading-5"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- save info.. checkbox -->
+            <div class="mt-4 lg:mt-5">
+              <input
+                type="checkbox"
+                name="saveInfo"
+                id="saveInfo"
+                class="w-4 rounded border-gray3 lg:w-[21px]"
+              />
+              <label
+                for="saveInfo"
+                class="lg:[11px] ml-[7px] text-[10px] leading-3 text-gray2 lg:text-[12px] lg:leading-[15px]"
+                >Save this information for next time</label
+              >
+            </div>
+
+            <!-- button -->
+            <div class="text-right">
+              <button
+                type="submit"
+                class="mt-5 rounded-xl bg-orange py-[17px] px-[45px] text-right text-[16px] leading-[19.5px] text-white lg:mt-10"
+              >
+                Continue
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="mt-12 mb-6 text-center text-gray4 lg:mt-10">
+        <p class="text-[14px] leading-[17.07px]">
+          created by
+          <b
+            ><a href="https://devchallenges.io/portfolio/vilasgannaram"
+              >vilasgannaram</a
+            ></b
+          >
+          - devChallenges.io
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
