@@ -53,6 +53,8 @@
       };
     </script>
 
+    <script src="./app.js" defer></script>
+
     <title>Checkout Page</title>
   </head>
   <body class="font-montserrat font-semibold">
@@ -82,7 +84,7 @@
                 <img
                   class="rounded-xl"
                   src="./assets/photo1.png"
-                  alt="Vintage Backbag"
+                  alt="photo1"
                 />
               </div>
 
@@ -107,9 +109,21 @@
                 <div
                   class="mt-8 flex w-[122px] justify-evenly rounded-xl border border-gray3 py-3 lg:mt-10 lg:w-[134px]"
                 >
-                  <button class="rounded-md bg-gray5 px-2 text-gray3">-</button>
-                  <span class="text-[16px] leading-5 text-gray">1</span>
-                  <button class="rounded-md bg-gray5 px-2 text-gray3">+</button>
+                  <button
+                    id="item_1_Qty_Minus"
+                    class="rounded-md bg-gray5 px-2 text-gray3 disabled:opacity-60"
+                  >
+                    -
+                  </button>
+                  <span id="item_1_Qty" class="text-[16px] leading-5 text-gray"
+                    >1</span
+                  >
+                  <button
+                    id="item_1_Qty_Plus"
+                    class="rounded-md bg-gray5 px-2 text-gray3 disabled:opacity-60"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
             </div>
@@ -121,7 +135,7 @@
                 <img
                   class="rounded-xl"
                   src="./assets/photo2.png"
-                  alt="Levi Shoes"
+                  alt="photo2"
                 />
               </div>
 
@@ -146,9 +160,23 @@
                 <div
                   class="mt-8 flex w-[122px] justify-evenly rounded-xl border border-gray3 py-3 lg:mt-10 lg:w-[134px]"
                 >
-                  <button class="rounded-md bg-gray5 px-2 text-gray3">-</button>
-                  <span class="text-[16px] leading-5 text-gray">1</span>
-                  <button class="rounded-md bg-gray5 px-2 text-gray3">+</button>
+                  <button
+                    id="item_2_Qty_Minus"
+                    class="rounded-md bg-gray5 px-2 text-gray3 disabled:opacity-60"
+                  >
+                    -
+                  </button>
+                  <span
+                    id="item_2_Qty"
+                    class="text-[16px] leading-5 text-gray disabled:opacity-60"
+                    >1</span
+                  >
+                  <button
+                    id="item_2_Qty_Plus"
+                    class="rounded-md bg-gray5 px-2 text-gray3 disabled:opacity-60"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
             </div>
@@ -161,7 +189,7 @@
               class="flex justify-between border-t border-gray4 py-2.5 text-[14px] leading-[17px] text-gray1"
             >
               <h4 class="lg:text-[18px] lg:leading-[21px]">Shipping</h4>
-              <p class="">$19</p>
+              <p id="shippingCharges" class="">$19</p>
             </div>
 
             <!-- total -->
@@ -169,7 +197,7 @@
               class="mt-3 flex justify-between border-t border-gray4 py-2.5 text-[14px] leading-[17px] text-gray1"
             >
               <h4 class="lg:text-[18px] lg:leading-[21px]">Total</h4>
-              <p>$148.98</p>
+              <p id="totalPrice">$148.98</p>
             </div>
           </div>
         </div>
@@ -275,7 +303,7 @@
                   <img
                     class="absolute top-[50%] left-3.5 w-[15px] -translate-y-[50%] lg:w-5"
                     src="./assets/home.svg"
-                    alt="address"
+                    alt="home"
                   />
                   <input
                     type="address"
@@ -345,7 +373,7 @@
                     <img
                       class="absolute top-[50%] left-3.5 w-[15px] -translate-y-[50%] lg:w-5"
                       src="./assets/markunread_mailbox.svg"
-                      alt="postal code"
+                      alt="postalCode"
                     />
                     <input
                       type="postalCode"
